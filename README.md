@@ -1,4 +1,5 @@
 Usage: ./collision k n b
+
 to find (near) collisions on n number of keys, each key has k bits. If b=0 then we find all such near collisions, for b=1 it does not find a small 6-12 percent of repeated keys, but it is much faster. On my core-i7 a sample run:
 
 gerbicz@gerbicz-MS-7972:~$ ./collision 39 20000000 0
