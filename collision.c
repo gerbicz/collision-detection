@@ -273,11 +273,11 @@ uint32 fun_collision_search(cpu_thread_data_t *td, uint32 key_bits, bool allow_l
                uint32 hv=buckets[p]&hash_value2;
                arr[cnt++]=buckets[p++];
         
-               if(T[hv>>5]&(1u<<(hv&31))){
-                  T2[hv>>5]|=(1u<<(hv&31));
+               if(T2[hv>>5]&(1u<<(hv&31))){
+                  T[hv>>5]|=(1u<<(hv&31));
                }
                else{
-                  T[hv>>5]|=(1u<<(hv&31));
+                  T2[hv>>5]|=(1u<<(hv&31));
                }
            }
         }
